@@ -7,7 +7,7 @@ import { ScrollTrigger} from 'gsap/all';
 import Showcase from './Components/Showcase.jsx';
 import Perfomance from './Components/Perfomance.jsx';
 import Features from './Components/Features.jsx';
-import Higlights from './Components/Higlights.jsx';
+import Highlights from './Components/Highlights.jsx';
 import Footer from './Components/Footer.jsx';
 
 
@@ -23,7 +23,7 @@ const App = () => {
     <Showcase />
     <Perfomance />
     <Features />
-    <Higlights />
+    <Highlights />
     <Footer />
   </main>
   )

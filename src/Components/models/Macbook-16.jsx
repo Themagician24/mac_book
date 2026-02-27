@@ -23,19 +23,16 @@ export default function MacbookModel16(props) {
 
      const { color } = useMacbookStore();
 
-     useEffect(() => {
-       texture.colorSpace = SRGBColorSpace;
-       texture.needsUpdate = true;
-       scene.traverse((child) => {
-         if (child.isMesh) {
-
-           //  Change color only if the part name is NOT noChangeParts
-           if(!noChangeParts.includes(child.name)) {
-             child.material.color = new Color(color);
-           }
-           }
-         })
-     }, [color, scene, texture]);
+      useEffect(() => {
+        // Apply screen texture settings
+        scene.traverse((child) => {
+          if(child.isMesh) {
+            if(!noChangeParts.includes(child.name)) {
+              child.material.color = new Color(color);
+            }
+          }
+        });
+      }, [color, scene]);
 
 
   return (
